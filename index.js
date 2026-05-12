@@ -1,7 +1,6 @@
 const express = require("express");
-
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT ||3000;
 
 const calculate = (params) => {
   const m1 = params.m1 !== undefined ? parseFloat(params.m1) : null;
