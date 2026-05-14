@@ -96,3 +96,9 @@ The microservice returns JSON.
   "error": "Division by zero not allowed"
 }
 ```
+
+---
+
+## UML Sequence Diagram
+
+![Sequence Diagram](uml_sequence_diagram.png)
