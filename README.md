@@ -112,9 +112,9 @@ If you don't feel like running this, just paste this into your browser's address
 https://cs361-calculator-microservice.onrender.com/calculate?m1=5&m2=10&d1=4&d2=2
 ```
 Format the output of your monolith to mirror the structure of the url above.
-You must have either:
-&ensp;&ensp;m1 and m2 (for multiplication)
-&ensp;&ensp;d1 and d2 (for division)
-&ensp;&ensp;m1, d1, and d2 (for combined)
+You must have either:  <br />
+&ensp;- m1 and m2 (for multiplication) <br />
+&ensp;- d1 and d2 (for division) <br />
+&ensp;- m1, d1, and d2 (for combined) <br />
 Any other combination of parameters will return an error message.
 You can also test division by zero by setting d2 to 0, which should also return an error message.
