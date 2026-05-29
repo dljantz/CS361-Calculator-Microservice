@@ -2,6 +2,15 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT ||3000;
 
+
+const divide = (d1, d2) => {
+  if (d2 === 0) {
+    throw new Error("Division by zero not allowed");
+  }
+  return d1 / d2;
+};
+
+
 const calculate = (params) => {
   const m1 = params.m1 !== undefined ? parseFloat(params.m1) : null;
   const m2 = params.m2 !== undefined ? parseFloat(params.m2) : null;
@@ -19,17 +28,16 @@ const calculate = (params) => {
       return m1 * m2;
 
     case "d1d2":
-      if (d2 === 0) throw new Error("Division by zero not allowed");
-      return d1 / d2;
+      return divide(d1, d2);
 
     case "m1d1d2":
-      if (d2 === 0) throw new Error("Division by zero not allowed");
-      return m1 * (d1 / d2);
+      return m1 * divide(d1, d2);
 
     default:
       throw new Error("Invalid parameters.");
   }
 };
+
 
 app.get("/calculate", (req, res) => {
   try {
